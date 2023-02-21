@@ -1,24 +1,27 @@
-// Tim so co 6 chu so khac nhau
-// Chia het cho 5
-// Chia 3 du 1
+// Find all 6-unique-digit numbers that are divisible by 3 and have remainder is 1 when divided by 3
 
 #include <math.h>
 #include <stdio.h>
 
-int isDivisibleBy5(int n) {
+int isDivisibleBy5(int n)
+{
     return n % 5 == 0 ? 1 : 0;
 }
 
-int isRemainder1By3(int n) {
+int isRemainder1By3(int n)
+{
     return n % 3 == 1 ? 1 : 0;
 }
 
-int checkUniqueDigitsNum(int num) {
-    int digitArr[10] = {0};  // tao mang co 10 phan tu la 0
+int checkUniqueDigitsNum(int num)
+{
+    int digitArr[10] = {0}; // create an array that has 10 zero-value elements
     int digit;
-    while (num > 0) {
+    while (num > 0)
+    {
         digit = num % 10;
-        if (digitArr[digit] == 1) {
+        if (digitArr[digit] == 1)
+        {
             return 0;
         }
         digitArr[digit] = 1;
@@ -28,15 +31,18 @@ int checkUniqueDigitsNum(int num) {
     return 1;
 }
 
-int main() {
+int main()
+{
     int i, j = 0;
-    FILE* fptr;
+    FILE *fptr;
 
     fptr = fopen("output.txt", "w");
 
     int result[100000];
-    for (i = 100000; i < 1000000; i++) {
-        if (isDivisibleBy5(i) && isRemainder1By3(i) && checkUniqueDigitsNum(i)) {
+    for (i = 100000; i < 1000000; i++)
+    {
+        if (isDivisibleBy5(i) && isRemainder1By3(i) && checkUniqueDigitsNum(i))
+        {
             // result[j] = i;
             // j++;
 
