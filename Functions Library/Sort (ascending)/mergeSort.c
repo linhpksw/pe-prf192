@@ -1,29 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// To make this fuction sort array in descending order, change '>' in line 19 to '<'
+// For bigger amounts of number in array, change array size in line 6 and 31
 void mergeArray(float a[], int start, int mid, int end)
 {
-    int i;
-    int j = 0;
-    float L[100], R[100];
+    int i, j, k;
+    int sizeL = mid - start + 1;
+    int sizeR = end - mid;
 
-    int sizeL = mid - start + 2;
-    int sizeR = end - mid + 1;
-    for (i = 0; i < sizeL - 1; i++)
+    float L[sizeL], R[sizeR];
+    for (i = 0; i < sizeL; i++)
     {
         L[i] = a[start + i];
     }
-    L[sizeL - 1] = 999999; // sentinel value
-    for (i = 0; i < sizeR - 1; i++)
+    for (i = 0; i < sizeR; i++)
     {
         R[i] = a[mid + 1 + i];
     }
-    R[sizeR - 1] = 999999; // sentinel value
 
     i = 0;
     j = 0;
-    int k = start;
-    while (k <= end)
+    k = start;
+    while (i < sizeL && j < sizeR)
     {
         if (L[i] <= R[j])
         {
@@ -35,6 +34,20 @@ void mergeArray(float a[], int start, int mid, int end)
             a[k] = R[j];
             j++;
         }
+        k++;
+    }
+
+    while (i < sizeL)
+    {
+        a[k] = L[i];
+        i++;
+        k++;
+    }
+
+    while (j < sizeR)
+    {
+        a[k] = R[j];
+        j++;
         k++;
     }
 }
