@@ -16,7 +16,7 @@ int main()
 {
     float a[10] = {175.62, 252.02, 293.33, 14.47, 216.77, 46.77, 107.36, 97.16, 91.67, 0};
     int size = sizeof(a) / sizeof(float);
-    arrayElementInsertion(a, size, 2, 15);
+    arrayElementInsertion(a, size, 2, 15); // result: insert 15 in the 3rd slot (i = 2)
     size = sizeof(a) / sizeof(float);
     int i;
     for (i = 0; i < size; i++)
