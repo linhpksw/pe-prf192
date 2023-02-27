@@ -7,7 +7,7 @@ int checkPrime(int num)
 {
     int count = 0;
     int i;
-    if (num == 1)
+    if (num == 1 || num == 0)
         return 0;
     for (i = 2; i <= floor(sqrt(num)); i++)
         if (num % i == 0)
