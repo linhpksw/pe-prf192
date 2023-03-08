@@ -1,29 +1,25 @@
 Note for C:
-- Print ASCII value of a char: printf("%d ", c); (c is char variable)
+- Print ASCII value of a char: printf("%d ", c);
+(c is char variable)
 
+    STRING : -how to use strncpy : strncpy(destination, source + start pos, length or copy);
+destination[end position] = '\0';  // this to make sure that string ends
 
+- strrev(str):reverse string(return func)
+                  ->way to save reverse string:
+    char s[10] = "abcdefghij";
+char a[10];
+strcpy(a, strrev(s));  // this will save reversed 's' to 'a'
 
-STRING:
-- how to use strncpy:
- strncpy(destination, source + start pos, length or copy);
- destination[end position] = '\0'; //this to make sure that string ends
+- strcat(s1, s2):return to s1s2
+    eg.:s1 = "abc", s2 = "def"->strcat(s1, s2) = "abcdef"
 
-- strrev(str): reverse string (return func)
- -> way to save reverse string:
-     char s[10] = "abcdefghij";
-     char a[10];
-     strcpy(a,strrev(s)); //this will save reversed 's' to 'a'
+                                                 - strcmp(s1, s2):
+                                                     = 0 - s1 = s2 > 0 - s1 > s2 < 0 - s1 < s2
+                                                                                                ->to sort string
+alphabetically:s1 < s2 < s3 < ... + strcmpi(s1, s2):this will not be case insensitive('A' = 'a')
 
-- strcat(s1,s2): return to s1s2
- eg.: s1 = "abc", s2 = "def" -> strcat(s1,s2) = "abcdef"
-
-- strcmp(s1,s2): = 0 - s1 = s2
-                 > 0 - s1 > s2
-                 < 0 - s1 < s2
- -> to sort string alphabetically: s1 < s2 < s3 < ...
- + strcmpi(s1,s2): this will not be case insensitive ('A' = 'a')
-
-- char* s2 = strdup(s1): duplicate s1 to s2
+                                  - char* s2 = strdup(s1): duplicate s1 to s2
   char* s2 = strndup(s1, n): duplicate first 5 chars in s1 to s2
 
 - strlwr(str): make str lowercase
@@ -62,8 +58,8 @@ x = -98.4
 
 CTYPE: these funcs all return 1 when true, 0 when false
 - isblank(char c), isspace(char c): (true = blank)
- + isblank() considers blank characters the tab character (‘\t’) and the space character (‘ ‘).
- + isspace() considers space characters : (‘ ‘) – Space, (‘\t’) – Horizontal tab, (‘\n’) – Newline, (‘\v’) – Vertical tab, (‘\f’) – Feed, (‘\r’) – Carriage return
+ + isblank() considers blank characters the tab character ('\t') and the space character (' ').
+ + isspace() considers space characters : (' ') - Space, ('\t') - Horizontal tab, ('\n') - Newline, ('\v') - Vertical tab, ('\f') - Feed, ('\r') - Carriage return
  -> isblank() using for a line
     isspace() using for a paragraph
 
