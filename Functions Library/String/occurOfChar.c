@@ -3,19 +3,17 @@
 #include <stdlib.h>
 #include <string.h>
 
-// define:
-// cOCBD count occurrence of characters and sort them by dictionary
-// cOCBO count occurrence of characters and sort them by order
-
 /*
-a : 97 -> 0
-b : 98 -> 1
-c : 99 -> 2
-....
-z : 122 -> 25
+DEFINE:
+1) cOCBD: count occurrence of character and sort them by dictionary
+2) cOCBO: count occurrence of character and sort them by order
+3) fHFC: find highest frequency of character in a string
+
 */
+
 void cOCBD(char c[]);
 void cOCBO(char c[]);
+void fHFC(char c[]);
 
 int main() {
     // char c[] = "";
@@ -25,9 +23,34 @@ int main() {
     // scanf("%[^\n]%*c", c);
 
     // cOCBD(c);
-    cOCBO(c);
+    // cOCBO(c);
+    fHFC(c);
 
     return 0;
+}
+
+void fHFC(char c[]) {
+    int cnt[256] = {0};
+    int i;
+
+    for (i = 0; i < strlen(c); i++) {
+        cnt[c[i]]++;
+    }
+
+    int res = 0;
+    char kt;
+
+    for (i = 0; i < 256; i++) {
+        if (cnt[i]) {
+            if (cnt[i] >= res) {
+                // "=" means in case have the same highest occur, will print char have higher order in dictionary
+                res = cnt[i];
+                kt = (char)i;
+            }
+        }
+    }
+
+    printf("%c %d\n", kt, res);
 }
 
 void cOCBD(char c[]) {

@@ -8,7 +8,7 @@ int countWord(char string[300]) {
     int i;
     int wordCount = 1;
     for (i = 0; i < strlen(string); i++) {
-        if (string[i] == ' ' && string[i + 1] != ' ') {
+        if ((string[i] == ' ') && (string[i + 1] != ' ')) {
             wordCount++;
         }
     }
@@ -17,7 +17,7 @@ int countWord(char string[300]) {
 }
 
 int main() {
-    char str[300] = "Word1 ,Word 2  W-oRd3.   4or;'Wd !@";  // result: 6
+    char str[300] = "Word1 ,Word 2     W-oRd3.  4or;'Wd !@";  // result: 6
     printf("Word number: %d\n", countWord(str));
 
     system("pause");

@@ -5,8 +5,8 @@
 char* stringReplace(const char* str, const char* old, const char* new);
 
 int main() {
-    char str[] = "aa, ba, caa, aa";
-    char* newstr = stringReplace(str, "aa", "11");
+    char str[] = "aa-ba-caa-aa";
+    char* newstr = stringReplace(str, "aa", "AA");
 
     printf("Original: %s\n", str);
     printf("New: %s\n", newstr);

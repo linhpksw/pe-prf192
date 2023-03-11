@@ -1,0 +1,1 @@
+{"name":"Local: trim","url":"c:\\Users\\linhp\\Desktop\\pe-prf192\\Functions Library\\String\\trim.c","tests":[{"id":1678529495150,"input":"JS - Java  -  Python","output":"JS Java Python"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\linhp\\Desktop\\pe-prf192\\Functions Library\\String\\trim.c","group":"local","local":true}
