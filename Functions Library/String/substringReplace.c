@@ -3,12 +3,12 @@
 #include <string.h>
 
 char* substring(char* src, int start, int len);
-char* strReplace(const char* str, const char* old, const char* new);
+char* stringReplace(const char* str, const char* old, const char* new);
 
 int main() {
     char str[] = "aa, ba, caa";
 
-    char* newstr = strReplace(str, substring(str, 0, 2), "11");
+    char* newstr = stringReplace(str, substring(str, 0, 2), "11");
 
     printf("Original: %s\n", str);  // Original: aa, ba, caa
     printf("New: %s\n", newstr);    // New: 11, ba, c11
@@ -40,7 +40,7 @@ char* substring(char* src, int start, int len) {
     return dest;
 }
 
-char* strReplace(const char* str, const char* old, const char* new) {
+char* stringReplace(const char* str, const char* old, const char* new) {
     char* result;
     int i, count = 0;
     size_t newlen = strlen(new);

@@ -2,11 +2,12 @@
 #include <stdlib.h>
 #include <string.h>
 
-void sortAlphabetically(char* words[], int count) {
+void sortWord(char* words[], int count) {
     char* x;
 
     for (int i = 0; i < count; i++) {
         for (int j = i + 1; j < count; j++) {
+            // change '<' to '>' to sort unalphabetical words
             if (strcmp(words[i], words[j]) < 0) {
                 x = words[j];
                 words[j] = words[i];
@@ -20,7 +21,7 @@ int main() {
     char* name[] = {"cherry", "orange", "apple", "oyster"};
     int size = sizeof(name) / sizeof(name[0]);
 
-    sortAlphabetically(name, size);
+    sortWord(name, size);
 
     int i;
     for (i = 0; i < size; i++) {

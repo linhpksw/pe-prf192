@@ -2,11 +2,11 @@
 #include <stdlib.h>
 #include <string.h>
 
-char* strReplace(const char* str, const char* old, const char* new);
+char* stringReplace(const char* str, const char* old, const char* new);
 
 int main() {
     char str[] = "aa, ba, caa, aa";
-    char* newstr = strReplace(str, "aa", "11");
+    char* newstr = stringReplace(str, "aa", "11");
 
     printf("Original: %s\n", str);
     printf("New: %s\n", newstr);
@@ -16,7 +16,7 @@ int main() {
     return 0;
 }
 
-char* strReplace(const char* str, const char* old, const char* new) {
+char* stringReplace(const char* str, const char* old, const char* new) {
     char* result;
     int i, count = 0;
     size_t newlen = strlen(new);

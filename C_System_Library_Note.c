@@ -2,28 +2,29 @@ Note for C:
 - Print ASCII value of a char: printf("%d ", c);
 (c is char variable)
 
-    STRING : -how to use strncpy : strncpy(destination, source + start pos, length or copy);
+STRING : 
+- strncpy(destination, source + start pos, length of copy);
 destination[end position] = '\0';  // this to make sure that string ends
 
-- strrev(str):reverse string(return func)
-                  ->way to save reverse string:
-    char s[10] = "abcdefghij";
+- strrev(str): return nothing but the reversed string is stored in the same string.
+-> way to save reverse string:
+char s[10] = "abcdefghij";
 char a[10];
 strcpy(a, strrev(s));  // this will save reversed 's' to 'a'
 
-- strcat(s1, s2):return to s1s2
-    eg.:s1 = "abc", s2 = "def"->strcat(s1, s2) = "abcdef"
+- strcat(s1, s2): return to s1s2
+eg.:s1 = "abc", s2 = "def"->strcat(s1, s2) = "abcdef"
 
-                                                 - strcmp(s1, s2):
-                                                     = 0 - s1 = s2 > 0 - s1 > s2 < 0 - s1 < s2
-                                                                                                ->to sort string
-alphabetically:s1 < s2 < s3 < ... + strcmpi(s1, s2):this will not be case insensitive('A' = 'a')
 
-                                  - char* s2 = strdup(s1): duplicate s1 to s2
-  char* s2 = strndup(s1, n): duplicate first 5 chars in s1 to s2
+- strcmp(s1, s2): 
+s1 = s2 = 0, s1 > s2: 1, s1 < s2: -1
+- strcmpi(s1, s2): like strcmp but this will not be case insensitive ('A' = 'a')
 
-- strlwr(str): make str lowercase
-  strupr(str): make str uppercase
+- char* s2 = strdup(s1): duplicate s1 to s2
+- char* s2 = strndup(s1, n): duplicate first 5 chars in s1 to s2
+
+- strlwr(str): convert string to lowercase
+- strupr(str): convert string to uppercase
 
 
 MATH:
@@ -40,7 +41,7 @@ x = -98.4
 - exp(x): calc e^x (x can be double)
 - cos(x), acos(x): calc cos, cos^-1
 
- some const value in math.h lib:
+some const value in math.h lib:
 - M_E: e
 - M_LOG2E: log2(e)
 - M_LOG10E: log10(e)
@@ -66,6 +67,9 @@ CTYPE: these funcs all return 1 when true, 0 when false
 - isdigit(char c) (true = a digit)
 - islower(char c) (true = lowercase letter)
 - isupper(char c) (true = uppercase letter)
+
+- isalpha(char c) uppercase alpha: 1, lowercase alpha: 2, non-alpha: 0
+
 - ispunct(char c) (true = any chars that are not num or alphabet)
  eg.: @ ! , . ? & ^ *...etc.
 
@@ -75,3 +79,4 @@ CTYPE: these funcs all return 1 when true, 0 when false
 - toascii(c): convert c to ascii value
 - tolower(c): convert c to lowercase
 - toupper(c): convert c to uppercase
+
