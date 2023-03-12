@@ -7,18 +7,19 @@ void split(char c[], char delimiter, char* arr[]);
 
 int main() {
     char str[] = "nguyen van a";
+    char temp[20];
 
     char* arr[10];  // Maximum number of tokens
     int i = 0;
 
     split(str, ' ', arr);
 
-    // for (i = 0; i < 4; i++) {
-    //     printf("%s", );
-    // }
-
     while (arr[i] != NULL) {
-        printf("%s ", arr[i]);
+        strcpy(temp, arr[i]);
+
+        temp[0] = toupper(temp[0]);
+
+        printf("%s ", temp);
         i++;
     }
 

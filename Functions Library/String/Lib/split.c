@@ -10,7 +10,7 @@ int main() {
     char* arr[20];  // Maximum number of tokens (tokens are result in each loop)
     int i;
 
-    split(c, '_', arr);  // return array ["JS", "Java", Python]
+    split(c, '_', arr);  // return pointer array ["JS", "Java", Python]
 
     for (i = 0; i < 3; i++) {
         printf("%s\n", arr[i]);
