@@ -1,1 +1,0 @@
-{"name":"Local: occurrenceOfChar","url":"c:\\Users\\linhp\\Desktop\\pe-prf192\\Functions Library\\String\\occurrenceOfChar.c","tests":[{"id":1678461204392,"input":"666 ^^","output":"a 5\nb 2\nc 1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\linhp\\Desktop\\pe-prf192\\Functions Library\\String\\occurrenceOfChar.c","group":"local","local":true}
