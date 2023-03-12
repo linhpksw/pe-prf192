@@ -8,16 +8,18 @@ void split(char c[], char delimiter, char* arr[]);
 int main() {
     char str[] = "nguyen van a";
 
-    char* arr[20];  // Maximum number of tokens
+    char* arr[10];  // Maximum number of tokens
     int i;
 
     split(str, ' ', arr);
 
-    int size = sizeof(arr) / sizeof(arr[0]);
-
-    for (i = 0; i < size; i++) {
-        printf("%s\n", arr[i]);
+    for (i = 0; i < 3; i++) {
+        printf("%s", arr[i]);
     }
+
+    // while (arr[i] != ) {
+    //     printf("%s ", arr[i]);
+    // }
 
     return 0;
 }
