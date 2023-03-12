@@ -3,37 +3,53 @@
 #include <stdlib.h>
 #include <string.h>
 
-void split(char c[], char delimiter, char* arr[]);
+#define MAX_ELEMENT 20
+#define MAX_LENGTH 500
+
+void split(char c[], char delimiter, char arr[][MAX_LENGTH]);
+int stringLength(char arr[][MAX_LENGTH]);
 
 int main() {
-    char str[] = "nguyen van a";
-    char temp[20];
-
-    char* arr[10];  // Maximum number of tokens
-    int i = 0;
+    char str[] = "nguyen van a hung";
+    char arr[MAX_ELEMENT][MAX_LENGTH];
 
     split(str, ' ', arr);
+    int size = stringLength(arr);
 
-    while (arr[i] != NULL) {
-        strcpy(temp, arr[i]);
-
-        temp[0] = toupper(temp[0]);
-
-        printf("%s ", temp);
-        i++;
+    int i = 0;
+    for (i = 0; i < size; i++) {
+        printf("%s\n", arr[i]);
     }
 
     return 0;
 }
 
-void split(char c[], char delimiter, char* arr[]) {
+int stringLength(char arr[][MAX_LENGTH]) {
+    int i, size = 0;
+
+    for (i = 0; i < MAX_ELEMENT; i++) {
+        if (strlen(arr[i]) > 0) {
+            size++;
+        }
+    }
+
+    return size;
+}
+
+void split(char c[], char delimiter, char arr[][MAX_LENGTH]) {
     char* token;
     int i = 0;
 
-    token = strtok(c, &delimiter);
+    char delim[2] = {delimiter, '\0'};
+    token = strtok(c, delim);
 
-    while (token != NULL) {
-        arr[i++] = token;
-        token = strtok(NULL, &delimiter);
+    for (i = 0; i < MAX_ELEMENT; i++) {
+        arr[i][0] = '\0';
+    }
+
+    i = 0;
+    while (i < MAX_ELEMENT && token != NULL) {
+        strncpy(arr[i++], token, MAX_LENGTH - 1);
+        token = strtok(NULL, delim);
     }
 }
