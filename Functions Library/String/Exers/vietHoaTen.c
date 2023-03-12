@@ -9,17 +9,18 @@ int main() {
     char str[] = "nguyen van a";
 
     char* arr[10];  // Maximum number of tokens
-    int i;
+    int i = 0;
 
     split(str, ' ', arr);
 
-    for (i = 0; i < 3; i++) {
-        printf("%s", arr[i]);
-    }
-
-    // while (arr[i] != ) {
-    //     printf("%s ", arr[i]);
+    // for (i = 0; i < 4; i++) {
+    //     printf("%s", );
     // }
+
+    while (arr[i] != NULL) {
+        printf("%s ", arr[i]);
+        i++;
+    }
 
     return 0;
 }
