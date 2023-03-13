@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define MAX_LENGTH 20
+
 char* toString(int num);
 
 int main() {
@@ -16,7 +18,7 @@ int main() {
 }
 
 char* toString(int num) {
-    char* str = malloc(20 * sizeof(char));
+    char* str = malloc(MAX_LENGTH * sizeof(char));
 
     sprintf(str, "%d", num);
 

@@ -5,6 +5,7 @@
         "stdlib.h": "c",
         "stdio.h": "c",
         "random": "c",
-        "ctype.h": "c"
+        "ctype.h": "c",
+        "string.h": "c"
     }
 }

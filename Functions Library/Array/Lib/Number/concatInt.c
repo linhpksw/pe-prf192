@@ -6,34 +6,35 @@
 #define MAX_LENGTH 100
 #define MAX_ELEMENT 20
 
-void concat(int arr1[], int arr2[], int res[]);
+void concatInt(int arr1[], int arr2[], int res[], size_t size1, size_t size2, size_t total);
 
 int main() {
-    char arr1[] = {1, 2};
-    char arr2[] = {3, 4, 5};
-    char res[MAX_ELEMENT];
+    int arr1[] = {1, 2};
+    int arr2[] = {3, 4, 5, 7, 8, 9};
 
-    concat(arr1, arr2, res);  // concat will append arr2 into arr1
+    size_t size1 = sizeof(arr1) / sizeof(arr1[0]);
+    size_t size2 = sizeof(arr2) / sizeof(arr2[0]);
+    size_t total = size1 + size2;
+
+    int res[total];
+
+    concatInt(arr1, arr2, res, size1, size2, total);  // concatInt will append arr2 into arr1
 
     int i;
-    for (i = 0; i < 5; i++) {
+    for (i = 0; i < total; i++) {
         printf("%d ", res[i]);  // {1, 2, 3, 4, 5};
     }
 
     return 0;
 }
 
-void concat(int arr1[], int arr2[], int res[]) {
-    int size1 = stringLength(arr1);  // 2
-    int size2 = stringLength(arr2);  // 3
-    int total = size1 + size2;
-
+void concatInt(int arr1[], int arr2[], int res[], size_t size1, size_t size2, size_t total) {
     int i;
     for (i = 0; i < total; i++) {
         if (i < size1) {
-            strcpy(res[i], arr1[i]);
+            res[i] = arr1[i];
         } else {
-            strcpy(res[i], arr2[i - size1]);
+            res[i] = arr2[i - size1];
         }
     }
 }
