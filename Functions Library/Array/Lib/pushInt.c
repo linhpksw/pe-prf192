@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// To make this function work with float/double type, change all variables type to float EXCEPT 'i'
+// To make this function work with float/double type, change all variables type to float EXCEPT 'i' and 'sizeArr'
 // Also remember to change %d to %f or %lf (line 18)
 void pushInt(int arr[], int newArr[], int sizeArr, int num);
 
