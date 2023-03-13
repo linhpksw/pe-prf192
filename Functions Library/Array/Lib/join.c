@@ -3,13 +3,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-// No-pointer version
-
-#include <ctype.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
 #define MAX_LENGTH 500
 
 void join(char arr[][MAX_LENGTH], char separator[], char res[]);

@@ -4,6 +4,7 @@
         "*.svg": "html",
         "stdlib.h": "c",
         "stdio.h": "c",
-        "random": "c"
+        "random": "c",
+        "ctype.h": "c"
     }
 }
