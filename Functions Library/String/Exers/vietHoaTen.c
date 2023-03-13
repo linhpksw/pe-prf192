@@ -8,25 +8,18 @@
 
 void split(char c[], char delimiter, char arr[][MAX_LENGTH]);
 int stringLength(char arr[][MAX_LENGTH]);
-void join(char arr[][MAX_LENGTH], char separator[], char res[]);
 
 int main() {
-    char str[] = "nguyen van a hung day";
-
+    char str[] = "nguyen van a hung";
     char arr[MAX_ELEMENT][MAX_LENGTH];
-    char res[MAX_LENGTH];
 
     split(str, ' ', arr);
     int size = stringLength(arr);
 
     int i = 0;
     for (i = 0; i < size; i++) {
-        arr[i][0] = toupper(arr[i][0]);
+        printf("%s\n", arr[i]);
     }
-
-    join(arr, "_", res);
-
-    printf("%s", res);
 
     return 0;
 }
