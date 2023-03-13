@@ -3,16 +3,10 @@
 #include <stdlib.h>
 #include <string.h>
 
-int numberLength(int arr[]);
-
 int main() {
     int arr[] = {-1, 5, 6, 8};
 
-    printf("%d", numberLength(arr));
+    printf("%d", sizeof(arr) / sizeof(arr[0]));
 
     return 0;
-}
-
-int numberLength(int arr[]) {
-    return sizeof(arr) / sizeof(int);
 }
