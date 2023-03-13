@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// To make this function work with float/double type, change all variables type to float/double EXCEPT 'i' and 'sizeArr'
+// Also remember to change %d to %f or %lf (line 23)
+
 // Use: insertInt() inserts element(s) in a sub array to the original array
 
 void insertInt(int arr[], int sizeArr, int newArr[], int size_newArr, int start);
