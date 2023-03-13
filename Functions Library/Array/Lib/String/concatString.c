@@ -34,7 +34,6 @@ int stringLength(char arr[][MAX_LENGTH]) {
             size++;
         }
     }
-
     return size;
 }
 
