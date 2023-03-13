@@ -8,15 +8,14 @@
 int stringLength(char arr[][MAX_LENGTH]);
 void popString(char newArr[][MAX_LENGTH], char arr[][MAX_LENGTH]);
 
-int main()
-{
+int main() {
     char arr[MAX_ELEMENT][MAX_LENGTH] = {"ele1", "ele2", "ele3", "ele4"};
     char newArr[MAX_ELEMENT][MAX_LENGTH];
+
     popString(newArr, arr);
 
     int i;
-    for (i = 0; i < stringLength(newArr); i++)
-    {
+    for (i = 0; i < stringLength(newArr); i++) {
         printf("%s ", newArr[i]);
     }
 
@@ -24,14 +23,11 @@ int main()
     return 0;
 }
 
-int stringLength(char arr[][MAX_LENGTH])
-{
+int stringLength(char arr[][MAX_LENGTH]) {
     int i, size = 0;
 
-    for (i = 0; i < MAX_ELEMENT; i++)
-    {
-        if (strlen(arr[i]) > 0)
-        {
+    for (i = 0; i < MAX_ELEMENT; i++) {
+        if (strlen(arr[i]) > 0) {
             size++;
         }
     }
@@ -39,12 +35,10 @@ int stringLength(char arr[][MAX_LENGTH])
     return size;
 }
 
-void popString(char newArr[][MAX_LENGTH], char arr[][MAX_LENGTH])
-{
+void popString(char newArr[][MAX_LENGTH], char arr[][MAX_LENGTH]) {
     int size = stringLength(arr);
     int i;
-    for (i = 0; i < size - 1; i++)
-    {
+    for (i = 0; i < size - 1; i++) {
         strcpy(newArr[i], arr[i]);
     }
 }

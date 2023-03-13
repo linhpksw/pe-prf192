@@ -6,7 +6,7 @@
 void toUpperCase(char str[]);
 
 int main() {
-    char str[] = "lowerword";
+    char str[] = "uppercase";
     toUpperCase(str);
 
     printf("%s", str);
