@@ -6,6 +6,8 @@
 #define MAX_ELEMENT 20
 #define MAX_LENGTH 500
 
+// Use: stringLength() calculate actual elements in an array of strings
+
 int stringLength(char arr[][MAX_LENGTH]);
 
 int main() {

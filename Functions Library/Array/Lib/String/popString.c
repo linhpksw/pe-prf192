@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+// Use: popString() removes the last element of an array
+
 #define MAX_ELEMENT 20
 #define MAX_LENGTH 500
 

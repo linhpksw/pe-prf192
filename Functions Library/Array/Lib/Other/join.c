@@ -5,6 +5,8 @@
 
 #define MAX_LENGTH 500
 
+// Use: join() returns an array as a string, separated by the specified separator.
+
 void join(char arr[][MAX_LENGTH], char separator[], char res[]);
 
 int main() {

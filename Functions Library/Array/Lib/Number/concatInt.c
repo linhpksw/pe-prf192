@@ -6,6 +6,8 @@
 #define MAX_LENGTH 100
 #define MAX_ELEMENT 20
 
+// Use: concatInt() concatenates two arrays into one array
+
 void concatInt(int arr1[], int arr2[], int res[], size_t size1, size_t size2, size_t total);
 
 int main() {

@@ -3,6 +3,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+// Use: numberLength() calculate actual elements in an array of numbers
+
 int main() {
     int arr[] = {-1, 5, 6, 8};
 
