@@ -13,9 +13,11 @@ int main()
     int arr[] = {1, 2, 3, 6, 7};
     int newArr[] = {4, 5};
     int sizeArr = sizeof(arr) / sizeof(arr[0]);
+    printf("%d\n", sizeArr);
     int size_newArr = sizeof(newArr) / sizeof(arr[0]);
 
-    insertInt(arr, sizeArr, newArr, size_newArr, 3);
+    insertInt(arr, sizeArr, newArr, size_newArr, 5);
+    printf("%d\n", sizeArr);
 
     int i;
     for (i = 0; i < sizeArr; i++)
@@ -30,14 +32,17 @@ int main()
 void insertInt(int arr[], int sizeArr, int newArr[], int size_newArr, int start)
 {
     int i;
-    for (i = sizeArr; i >= start; i--)
+    if (sizeArr != start)
     {
-        arr[i + size_newArr] = arr[i];
+        for (i = sizeArr; i >= start; i--)
+        {
+            arr[i + size_newArr] = arr[i];
+        }
     }
     int j = 0;
-    for (i = start; i < start + size_newArr; i++)
+    for (i = 0; i < size_newArr; i++)
     {
-        arr[i] = newArr[j];
+        arr[i + start] = newArr[i];
         j++;
     }
 }
