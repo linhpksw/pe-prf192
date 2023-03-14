@@ -13,7 +13,7 @@ int main() {
     char arr[][MAX_LENGTH] = {"Banana", "Orange", "Apple", "Mango"};
     char res[100];
 
-    join(arr, "_", res);
+    join(arr, " | ", res);
 
     printf("%s", res);
 
