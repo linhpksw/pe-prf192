@@ -12,6 +12,7 @@ int main() {
     int arr[] = {1, 2, 3, 6, 7};
     int newArr[] = {4, 5};
     int sizeArr = sizeof(arr) / sizeof(arr[0]);
+    printf("%d\n", sizeArr);
     int size_newArr = sizeof(newArr) / sizeof(arr[0]);
 
     insertInt(arr, sizeArr, newArr, size_newArr, 10);
