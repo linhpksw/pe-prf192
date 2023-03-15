@@ -1,6 +1,5 @@
 Note for C:
-- Print ASCII value of a char: printf("%d ", c);
-(c is char variable) - Print decimal value : % d hexa.value : % x(lowercase letters), % X(uppercase letters) octal value : % o
+- Print ASCII value of a char: printf("%d ", c); (c is char variable)
 - Print decimal value: %d
         hexa.   value: %x (lowercase letters), %X (uppercase letters)
         octal   value: %o
