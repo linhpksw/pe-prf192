@@ -1,26 +1,28 @@
 Note for C:
 - Print ASCII value of a char: printf("%d ", c);
-(c is char variable)
-
-STRING : 
+(c is char variable) - Print decimal value : % d hexa.value : % x(lowercase letters), % X(uppercase letters) octal value : % o
+- Print decimal value: %d
+        hexa.   value: %x (lowercase letters), %X (uppercase letters)
+        octal   value: %o
+STRING:
 - strncpy(destination, source + start pos, length of copy);
-destination[end position] = '\0';  // this to make sure that string ends
+  destination[end position] = '\0'; // this to make sure that string ends
 
-- strrev(str): return nothing but the reversed string is stored in the same string.
--> way to save reverse string:
-char s[10] = "abcdefghij";
-char a[10];
-strcpy(a, strrev(s));  // this will save reversed 's' to 'a'
+- strrev(str):return nothing but the reversed string is stored in the same string.
+ -> way to save reverse string:
+  char s[10] = "abcdefghij";
+  char a[10];
+  strcpy(a, strrev(s)); // this will save reversed 's' to 'a'
 
 - strcat(s1, s2): return to s1s2
-eg.:s1 = "abc", s2 = "def"->strcat(s1, s2) = "abcdef"
+    eg.:s1 = "abc", s2 = "def" -> strcat(s1, s2) = "abcdef"
+- strcmp(s1, s2):s1 = s2 = 0
+                 s1 > s2 = 1
+				 s1 < s2 = -1
+ -> Alphabetically order: s1 < s2 < s3 < ...
+- strcmpi(s1, s2):like strcmp but this will not be case insensitive('A' = 'a')
 
-
-- strcmp(s1, s2): 
-s1 = s2 = 0, s1 > s2: 1, s1 < s2: -1
-- strcmpi(s1, s2): like strcmp but this will not be case insensitive ('A' = 'a')
-
-- char* s2 = strdup(s1): duplicate s1 to s2
+- char *s2 = strdup(s1): duplicate s1 to s2
 - char* s2 = strndup(s1, n): duplicate first 5 chars in s1 to s2
 
 - strlwr(str): convert string to lowercase
@@ -79,4 +81,3 @@ CTYPE: these funcs all return 1 when true, 0 when false
 - toascii(c): convert c to ascii value
 - tolower(c): convert c to lowercase
 - toupper(c): convert c to uppercase
-

@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// This exercise can be called "check palindrome number"
+
 int reverseNum(int num)
 {
     int newNum;
